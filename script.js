@@ -60,6 +60,7 @@ function selectMovie(menu) {
     })
   }  else {
     clearSeats();
+    updateSelectedCount();
 
   }
 }
@@ -99,7 +100,6 @@ function clearSeats() {
     seat.classList.remove('selected');
     seat.classList.remove('disabled');
   })
-  updateSelectedCount();
 }
 
 function disableSeats() {
