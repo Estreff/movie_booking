@@ -54,6 +54,10 @@ body {
   background-color: #fff;
 }
 
+.seat.disabled {
+  pointer-events: none;
+}
+
 .seat:nth-of-type(2) {
   margin-right: 18px;
 }
@@ -112,4 +116,33 @@ p.text {
 
 p.text span {
   color: #6feaf6;
+}
+
+button {
+  margin: 20px;
+  padding: 8px 20px;
+  color: #2e8891;
+  border: 3px solid #2e8891;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#book_seats {
+  background: #6feaf6;
+}
+
+#book_seats:hover {
+  background: #2e8891;
+  border: 3px solid #6feaf6;
+  color: #fff;
+}
+
+#reset:hover {
+  background: #2e8891;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+#reset {
+  background: #fff;
 }
