@@ -48,16 +48,19 @@ function selectMovie(menu) {
     const reserved = getMovie.reservedSeats;
     const occupied = getMovie.occupiedSeats;
     clearSeats();
+    
     seats.forEach((seat, index) => {
-      if(reserved.indexOf(index) > -1) {
+      if(reserved && reserved.indexOf(index) > -1) {
         seat.classList.add('selected');
       }
       if(occupied.indexOf(index) > -1) {
         seat.classList.add('occupied');
       }
+      updateSelectedCount();
     })
   }  else {
     clearSeats();
+
   }
 }
 
@@ -96,6 +99,7 @@ function clearSeats() {
     seat.classList.remove('selected');
     seat.classList.remove('disabled');
   })
+  updateSelectedCount();
 }
 
 function disableSeats() {
