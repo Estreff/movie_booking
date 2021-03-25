@@ -43,6 +43,7 @@ function selectMovie(menu) {
   const getMovie = JSON.parse(localStorage.getItem(`${selectedMovie}`));
   if(selectedMovie == 0) {
     disableSeats();
+    updateSelectedCount();
     
   } else if(getMovie !== null) {
     const reserved = getMovie.reservedSeats;
